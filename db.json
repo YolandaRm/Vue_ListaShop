@@ -1,0 +1,23 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "tomates",
+            "ammount": 5,
+            "bought": true
+        },
+        {
+            "id": 2,
+            "name": "pepinos",
+            "ammount": 3,
+            "bought": false
+        },
+        {
+            "id": 2,
+            "name": "cebolla",
+            "ammount": 1,
+            "bought": true
+        }
+      
+    ]
+}
