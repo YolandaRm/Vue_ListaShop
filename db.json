@@ -4,18 +4,28 @@
             "id": 1,
             "name": "tomates",
             "ammount": 5,
+            "unit": "kg",
             "bought": true
         },
         {
             "id": 2,
             "name": "pepinos",
             "ammount": 3,
+            "unit": "kg",
             "bought": false
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "cebolla",
             "ammount": 1,
+            "unit": "kg",
+            "bought": true
+        }
+        {
+            "id": 4,
+            "name": "pan",
+            "ammount": 1,
+            "unit": "ud",
             "bought": true
         }
       
