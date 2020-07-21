@@ -1,8 +1,8 @@
 <template>
   <v-app>
-      <h1>Hola Mundo!</h1>
-      <router-link to="/">Lista</router-link>
-      <router-link to="/add">Add</router-link>
+    <h1>Hello</h1>
+     <router-link to="/">Lista</router-link>
+     <router-link to="/add">Add</router-link>
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App"
 };
 </script>

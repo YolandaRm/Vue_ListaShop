@@ -7,6 +7,7 @@ en vez de
         return axios.get(this._baseURL)
     }
 */
+  
 import axios from 'axios';
 
 export class HTTPService {
@@ -17,7 +18,6 @@ export class HTTPService {
         return this._http.get('');
     }
 }
-
 export const httpService = new HTTPService(
     axios.create({
         baseURL: 'http://localhost:3005/items'

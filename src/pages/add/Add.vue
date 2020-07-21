@@ -1,11 +1,9 @@
 <template>
-  <v-app>
-    <h1>Add</h1>
-  </v-app>
+    <h2>Add</h2>
 </template>
 
 <script>
 export default {
-  name: 'Add',
+  name: "Add"
 };
 </script>
