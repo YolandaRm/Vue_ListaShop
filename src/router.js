@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueRouter from 'vue-route';
+import VueRouter from 'vue-router';
 import List from './pages/list/List.vue';
 
 Vue.use(VueRouter);
