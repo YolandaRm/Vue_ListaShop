@@ -1,7 +1,6 @@
 <template>
   <v-card outlined>
-    <v-card-title> {{product.name}} {{product.ammount}} </v-card-title>
-
+    <v-card-title> {{product.name}} {{product.ammount}} {{product.unit}} {{product.comment}} </v-card-title>
     <v-card-actions>
       <v-switch></v-switch>
       <v-btn text>Detalles  <v-icon right>mdi-pencil</v-icon> </v-btn>

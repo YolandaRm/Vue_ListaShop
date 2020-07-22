@@ -5,6 +5,7 @@
             "name": "tomates",
             "ammount": 5,
             "unit": "kg",
+            "comment":"maduros",
             "bought": true
         },
         {
@@ -12,6 +13,7 @@
             "name": "pepinos",
             "ammount": 3,
             "unit": "kg",
+            "comment":"italianos",
             "bought": false
         },
         {
@@ -19,12 +21,14 @@
             "name": "cebolla",
             "ammount": 1,
             "unit": "kg",
+            "comment":"pequeñas",
             "bought": true
-        }
+        },
         {
             "id": 4,
             "name": "pan",
             "ammount": 1,
+            "comment":"braguette",
             "unit": "ud",
             "bought": true
         }
