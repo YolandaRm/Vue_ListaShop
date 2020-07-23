@@ -48,7 +48,7 @@ export default {
       drawer: false,
       items: [
         { title: 'Anotar', icon: 'mdi-pencil' },
-        { title: 'Listado', icon: 'mdi-format-list-bulleted-square'},
+        { title: 'Lista', icon: 'mdi-format-list-bulleted-square'},
       ],
     }
   },

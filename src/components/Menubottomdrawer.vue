@@ -1,7 +1,7 @@
 <template>
   <div>
       <v-app>
-        <v-card height="400" width="500">
+        <v-card class="mx-auto overflow-hidden" height="400" width="500">
           <v-system-bar color="deep-purple darken-3"></v-system-bar>
       
           <v-app-bar color="deep-purple accent-4" dark prominent>
@@ -23,7 +23,7 @@
 
                 <router-link to= "/">
                    <v-list-item>
-                  <v-btn icon> <v-icon>mdi-dots-vertical</v-icon> </v-btn>
+                  <v-btn icon> <v-icon>mdi-format-list-bulleted-square</v-icon> </v-btn>
                   <v-list-item-title>Lista</v-list-item-title>
                   </v-list-item>
                 </router-link>
@@ -44,6 +44,11 @@ export default {
       drawer: false,
       group: null,
     };
+    watch: {
+      group() {
+        this.drawer = false
+      },
+    },
   },
 }
 
