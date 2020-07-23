@@ -2,9 +2,9 @@
   <div>
     <h2>List</h2>
     <ul class="list">
-      <li v-for="item in items" :key="item.id">
+      <ul v-for="item in items" :key="item.id">
         <Product :product="item"></Product>
-      </li>
+      </ul>
     </ul>
   </div>
 </template>
@@ -14,6 +14,7 @@ import { mapState, mapActions } from "vuex";
 import Product from './Product';
 import { ACTION_TYPES } from "../../store/actions";
 import { httpService } from "../../http";
+
 export default {
   name: "List",
   components: {
