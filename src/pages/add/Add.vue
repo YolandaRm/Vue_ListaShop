@@ -1,5 +1,7 @@
 <template>
-<h2>App<h2>
+  <v-app>
+    <h1>Add</h1>
+  </v-app>
 </template>
 
 <script>
