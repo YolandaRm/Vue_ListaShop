@@ -17,6 +17,7 @@
 <script>
 import axios from "axios";
 import debounce from "debounce";
+
 export default {
   name: "Product",
 data() {
@@ -31,12 +32,12 @@ data() {
     }
   },
   methods: {
-    update: debounce(function(value) {
-      if(value === this.product.bought){
+    update: debounce(function(value) { //rebote, se invoca al valor de la función
+      if(value === this.product.bought){ //si el valor es el producto comprado lo devuelve
         return;
       }
       this.loading = true;
-      this.product.bought = value;
+      this.product.bought = value;   // y espera hasta que compre y de el valor
       axios
         .patch(`http://localhost:3005/items/${this.product.id}`, {
           bought: this.product.bought

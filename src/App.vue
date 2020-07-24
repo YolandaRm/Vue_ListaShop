@@ -1,7 +1,7 @@
 <template>
   <v-app>
- 
     <v-navigation-drawer v-model="drawer" app>
+      <!--<Inicio /> -->
       <Menu />
     </v-navigation-drawer>
     <v-app-bar app>
@@ -12,6 +12,7 @@
           <v-btn color="pink" dark @click.stop="drawer = !drawer">Lista de la compra</v-btn>
         </v-row>
     <!-- </v-img> -->
+    <!--cambiar este botón por un toolbar con menú de navegación...de lo mas normaldelmundomundial...total...-->
     </v-app-bar>
     <v-main>
       <router-view></router-view>
@@ -21,6 +22,7 @@
 
 <script>
 import Menu from "./components/Menu";
+/* import Inicio from "./component/Inicio"; */
 export default {
   name: "App",
   data(){
@@ -30,6 +32,7 @@ export default {
   },
   components: {
     Menu,
+   /*  Inicio, */
   },
 };
 </script>

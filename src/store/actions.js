@@ -16,5 +16,11 @@ export const actions = {
     async [ACTION_TYPES.GET_ITEMS](context, http){
         const {data} = await http.getAll();
         context.commit(MUTATION_TYPES.SET_ITEMS, data);
+    },
+    async [ACTION_TYPES.ADD_ITEM](context,{http, model}){
+        const response = await http.post(model);
+        context.commit(MUTATION_TYPES.ADD_ITEM, response.data);
+
     }
 }
+/* por favor explicarme esto último que no termino de entenderlo */
