@@ -1,12 +1,18 @@
 <template>
   <v-app>
-    <h1>Hello</h1>
-    <router-link to="/">Lista</router-link>
-    <router-link to="/add">Add</router-link>
-    <v-navigation-drawer>
-     <!--  <Menu />
-      <Textfield /> -->
+ 
+    <v-navigation-drawer v-model="drawer" app>
+      <Menu />
     </v-navigation-drawer>
+    <v-app-bar app>
+         <!-- <v-img
+      src="https://beta.losandes.com.ar/resizer/hkqKEXcRjVPSfVOIhmTN-H28GM8=/800x450/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/GNTGGMLDHFQTCZDGHFSDCZLDGE.jpg"
+    > -->
+        <v-row align="center" justify="center">
+          <v-btn color="pink" dark @click.stop="drawer = !drawer">Lista de la compra</v-btn>
+        </v-row>
+    <!-- </v-img> -->
+    </v-app-bar>
     <v-main>
       <router-view></router-view>
     </v-main>
@@ -14,14 +20,17 @@
 </template>
 
 <script>
-/* import Menu from "./components/menu";
-import Textfield from "./compponents/textfield";
- */
+import Menu from "./components/Menu";
 export default {
   name: "App",
+  data(){
+    return {
+      drawer: false
+    }
+  },
   components: {
-  /*   Menu,
-    Textfield, */
+    Menu,
   },
 };
 </script>
+

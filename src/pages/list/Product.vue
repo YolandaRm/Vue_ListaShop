@@ -1,11 +1,11 @@
 <template>
   <v-card outlined>
-    <v-div>
+    <div>
       <v-card-title class= "Card__title">
-          <v-p>{{product.name}} {{product.ammount}} {{product.unit}} </v-p>
-          <v-p class= "Card__comment">  {{product.comment}} </v-p>
+          <p>{{product.name}} {{product.ammount}} {{product.unit}} </p>
+          <p class= "Card__comment">  {{product.comment}} </p>
       </v-card-title>
-    </v-div>
+    </div>
     <v-card-actions class= "Card__button" >
        <!-- cuando se cambie el valor hacer un put para actualizar el campo bought -->
       <v-switch :input-value="product.bought"  :loading="loading" @change="update"></v-switch>

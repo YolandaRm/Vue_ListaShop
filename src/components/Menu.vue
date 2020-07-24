@@ -1,16 +1,10 @@
 <template>
   <v-sheet height="400" class="overflow-hidden" style="position: relative;">
-    <v-img
-      src="https://beta.losandes.com.ar/resizer/hkqKEXcRjVPSfVOIhmTN-H28GM8=/800x450/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/GNTGGMLDHFQTCZDGHFSDCZLDGE.jpg"
-    >
-      <v-container class="fill-height">
-        <v-row align="center" justify="center">
-          <v-btn color="pink" dark @click.stop="drawer = !drawer">Lista de la compra</v-btn>
-        </v-row>
-      </v-container>
-    </v-img>
+    
+    <!-- Si esto abre el menu, como esta esto dentro del menu -->
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+
+      <!-- Encabezado del menu -->
       <v-toolbar dense color="pink" dark flat>
 
         <v-list-item>
@@ -22,6 +16,7 @@
       </v-toolbar>
       <v-divider></v-divider>
 
+      <!-- Lista de opciones del menu -->
       <v-list dense>
         <v-list-item v-for="item in items" :key="item.title" link>
           <!-- tengo que meterlos dentro de un router-link GENERAL 
@@ -41,13 +36,14 @@
                 <router-link to= "/">{{ item.icon }} {{ item.title }}</router-link>
         <router-link to="/add">{{ item.icon }} {{ item.title }}</router-link>-->
       </v-list>
-    </v-navigation-drawer>
+
+
   </v-sheet>
 </template>
 
 <script>
 export default {
-  name: "Add",
+  name: "Menu",
   data() {
     return {
       drawer: false,
