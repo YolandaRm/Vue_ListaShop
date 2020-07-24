@@ -14,7 +14,6 @@ import { mapState, mapActions } from "vuex";
 import Product from './Product';
 import { ACTION_TYPES } from "../../store/actions";
 import { httpService } from "../../http";
-
 export default {
   name: "List",
   components: {
@@ -40,3 +39,4 @@ export default {
     gap: 1rem;
   }
 </style>
+

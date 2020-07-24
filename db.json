@@ -13,7 +13,7 @@
       "name": "Pimientos",
       "ammount": 2,
       "unit": "kg",
-      "comment":"italianos para freir",
+      "comment": "italianos para freir",
       "bought": false
     },
     {
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "Pan",
       "ammount": 1,
-      "comment":"braguette",
+      "comment": "braguette",
       "unit": "ud",
       "bought": true
     }
