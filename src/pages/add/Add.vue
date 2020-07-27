@@ -9,7 +9,7 @@
             <v-text-field v-model="product" :rules="[required('el dato es requerido')]" label="product" required></v-text-field>
           </v-col>
           <v-col cols="12" sm="2">
-            <v-select v-model="amount" :items="cantidad" :rules="[required('el dato es requerido')]" label="amount" required></v-select>
+            <v-select v-model="ammount" :items="cantidad" :rules="[required('el dato es requerido')]" label="ammount" required></v-select>
           </v-col>
           <v-col cols="12" sm="2">
             <v-select v-model="unit" :items="unidad" :rules="[required('el dato es requerido')]" label="unit" required></v-select>
@@ -31,6 +31,8 @@ import { mapActions } from "vuex";
 import { ACTION_TYPES } from "../../store/actions";
 import { httpService } from "../../http";
 
+
+
 function range(min, max) { //1.-creamos la function range para los parámetros - yo pensaba que sería solo una const...-
   const result = [];
   for(let i= min; i <=max; i++) {
@@ -45,14 +47,14 @@ export default {
     return {
       model: {
         product: "",
-        amount: 0,
+        ammount: 0,
         unit: "",
         comment: "",
         productRules: [this.required(Text) || "el dato es requerido"] //3.-y en el array me devuelve la función req de cada rule
       },
       rules: {
         product: [],
-        amount: range(1,20), //2.-invocamos la función range
+        ammount: range(1,20), //2.-invocamos la función range
         unit: ["Un.", "Kg.", "L."],
         comment: ["menos de 40 caracteres por favor"],
       },
@@ -60,8 +62,8 @@ export default {
     };
   },
   methods: {
-    ...mapActions({
-      addItem: ACTION_TYPES.ADD_ITEM,
+    ...mapActions({  //cuando se requieren acometer acciones en componentes
+      addItem: ACTION_TYPES.ADD_ITEM,  //añadira en los item las acciones y los tipos, para ello tendré que importar  actiontypes de actions
     }),
     crear(){
       this.validate();
@@ -70,23 +72,24 @@ export default {
       }
       let model = {
         product: this.product,
-        amount: this.amount,
+        ammount: this.ammount,
         unit:this.unit,
         bought: false
       };
-      this.addItem({model, http: httpService}).then (() => this.reset());
+      // para añadimoslosItems de model con el httpService para luego actualizar y volver al inicio, necesito importar httpService de http
+      this.addItem({model, http: httpService}).then (() => this.reset()); 
     }
   },
     reset() {
       this.$refs.form.reset();
     },
-    resetValidation () {
+    resetValidation () {  
       this.$refs.form.resetValidation()
     },
      validate () {
       this.$refs.form.validate()
     },
-    required(texto) {  //1.-creo el método required
+    required(texto) {  //1.-creo el método required no una const
       return function (value){
           return Boolean(value) || texto  
       } 

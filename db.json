@@ -5,7 +5,7 @@
       "name": "Tomates",
       "ammount": 3,
       "unit": "kg",
-      "comment": "maduros",
+      "comment": "maduros para gazpacho",
       "bought": true
     },
     {
@@ -21,14 +21,14 @@
       "name": "Cebollas",
       "ammount": 1,
       "unit": "kg",
-      "comment": "pequeñas",
+      "comment": "pequeñas y rojas",
       "bought": true
     },
     {
       "id": 4,
       "name": "Pan",
       "ammount": 1,
-      "comment": "braguette",
+      "comment": "braguette o campera",
       "unit": "ud",
       "bought": true
     }

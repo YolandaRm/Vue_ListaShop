@@ -1,17 +1,23 @@
 <template>
-  <v-card outlined>
-    <div>
-      <v-card-title class= "Card__title">
-          <p>{{product.name}} {{product.ammount}} {{product.unit}} </p>
-          <p class= "Card__comment">  {{product.comment}} </p>
-      </v-card-title>
-    </div>
-    <v-card-actions class= "Card__button" >
-       <!-- cuando se cambie el valor hacer un put para actualizar el campo bought -->
-      <v-switch :input-value="product.bought"  :loading="loading" @change="update"></v-switch>
-      <v-btn text router-link to= "/add" style= "color:red" ><v-icon right>mdi-pencil</v-icon>Edit</v-btn>
-    </v-card-actions>
-  </v-card>
+  <v-card style="width:400px">
+    <v-expansion-panels focusable outlined>  
+      <v-expansion-panel>
+        <v-expansion-panel-header>
+          <v-row  class="product" :justify="justify" :align="alignment"  style="height: 30px;" >            
+            <v-col cols="12" sm="4">{{product.name}}</v-col>
+            <v-col cols="12" sm="1">{{product.ammount}}</v-col>
+            <v-col cols="12" sm="2">{{product.unit}}</v-col>
+            <v-col cols="12" sm="2"></v-col>  
+            <v-switch :input-value="product.bought" :loading="loading" @change="update"></v-switch>                                                  
+          </v-row>     
+        </v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <p class="product__comment"> {{product.comment}} </p>
+          <v-btn color="pink" text>Editar<v-icon right>mdi-pencil</v-icon> </v-btn>  
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels> 
+  </v-card> 
 </template>
 
 <script>
@@ -23,6 +29,7 @@ export default {
 data() {
     return {
       loading: false,
+      disabled: false,
     };
   },
   props: {
@@ -50,17 +57,11 @@ data() {
 };
 </script>
 <style scoped>
-.Card__title {
-  display: flex;
-  color: blue;
-  justify-content: space-around;
+.product {
+  padding: 3px;
 }
-.Card__comment  {
-  color: grey ;
-  text: small;
+.product__comment {
+  color: grey;
 }
-.Card__button {
-  display: flex;
-  justify-content:flex-end;
-}
+
 </style>

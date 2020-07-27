@@ -11,13 +11,13 @@ export default new Vuetify({
         },
         themes: {
             
-            default: {
-                primary: colors.pink.base,
-                secondary: colors.grey.base,
+            light: {
+                primary: colors.blue.base,
+                secondary: colors.pink.base,
                 accent: colors.purple.base,
                 error: colors.red.base,
                 warning: colors.orange.base,
-                info: colors.grey.base,
+                info: colors.pink.base,
                 success: colors.green.base
             }
         }    

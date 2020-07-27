@@ -5,9 +5,9 @@
       <Menu />
     </v-navigation-drawer>
     <v-app-bar app>
-         <!-- <v-img
+<!--          <v-img
       src="https://beta.losandes.com.ar/resizer/hkqKEXcRjVPSfVOIhmTN-H28GM8=/800x450/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/GNTGGMLDHFQTCZDGHFSDCZLDGE.jpg"
-    > -->
+    >  -->
         <v-row align="center" justify="center">
           <v-btn color="pink" dark @click.stop="drawer = !drawer">Lista de la compra</v-btn>
         </v-row>

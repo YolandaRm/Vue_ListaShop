@@ -20,7 +20,15 @@ export const actions = {
     async [ACTION_TYPES.ADD_ITEM](context,{http, model}){
         const response = await http.post(model);
         context.commit(MUTATION_TYPES.ADD_ITEM, response.data);
-
     }
 }
-/* por favor explicarme esto último que no termino de entenderlo */
+/*   
+        con add vamos a añadir todos los items,
+        definimos un método que reciba los datos del cliente
+        le contesto con los datos actualizados y los añado en la mutación
+        esta mutación dando la respuesta de datos añadidos se hace a través del data
+        
+        respuesta constante = espera http. para enviar (cliente, los datos);
+        acometer en el contexto (mutar los tipos AÑADIENDO items en la respuesta. datos);
+        igual que los items pero añadiendolos en vez d obteniendolos
+ */
