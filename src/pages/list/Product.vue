@@ -3,7 +3,7 @@
     <v-expansion-panels focusable outlined>  
       <v-expansion-panel>
         <v-expansion-panel-header>
-          <v-row  class="product" :justify="justify" :align="alignment"  style="height: 30px;" >            
+          <v-row  class="product"  style="height: 30px;" >            
             <v-col cols="12" sm="4">{{product.name}}</v-col>
             <v-col cols="12" sm="1">{{product.ammount}}</v-col>
             <v-col cols="12" sm="2">{{product.unit}}</v-col>
